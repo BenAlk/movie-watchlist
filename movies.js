@@ -246,7 +246,6 @@ function loading() {
     movieContainerEl.innerHTML = `
     <div class="background-placeholder">
         <img class="${darkLoader()}" src="images/loading.gif" alt="movie area placeholder image">
-    <p>Loading...</p>
     </div>`
 }
 
