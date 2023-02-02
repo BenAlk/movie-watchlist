@@ -1,0 +1,294 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    height: 780px;
+}
+
+header{
+    background-image: url(images/header-background.avif);
+    background-position: 65% 27.5%;
+    height: 210px;
+    width: 550px;
+    margin: 0 auto;
+    padding: 0;
+}   
+
+section {
+    border: 1px solid lightgray;
+    border-radius: 0 0 4px 4px;
+    width: 550px;
+    margin: 0 auto;
+    min-height: 570px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none; 
+    cursor: pointer;  
+}
+
+/*------ Header Section ------- */
+
+.title-container {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin: 0 2.5rem;
+    height: 94%;
+    color: white;
+}
+
+.shade {
+    background: rgba(0, 0, 0, 0.6);
+    height: 208px;
+    width: 550px;   
+}
+
+.shade.h1{
+    font-size: 2.625rem;
+    font-weight: 800;
+}
+
+.shade.p {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+/*-------Search Bar -----------*/
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.search-input,
+.search-button,
+.mode {
+    position: relative;
+    margin: 0;
+    padding: 0.5rem;
+    border: 0;
+    background-color: white; 
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.search-input {
+    background: url(images/search.png) no-repeat;
+    background-position: 6% ;
+    padding-left: 3rem;
+    background-color: white;
+    border-left: 1px solid lightgray;
+    border-radius: 0;
+    width: 260px;
+    outline: none;
+}
+
+.mode,
+.search-button {
+    font-size: 0.875rem;
+    color: #374151;
+    border-left: 1px solid lightgray;
+    padding: 0 1rem;
+    cursor: pointer;
+}
+
+.search-button {
+    border-right: 1px solid lightgray;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.mode {
+    border-radius:4px 0px 0px 4px;
+    padding: 0 1.312rem;
+}
+
+.search-button:active {
+    background-color: lightgray;
+}
+
+/*---------- Movie List Section ---------- */
+.background-placeholder {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: lightgray;
+    height: 570px;
+    opacity: 0.3;
+}
+
+
+
+.movies-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* ------ Movie Wrapper --------- */
+
+.movie-wrapper{
+    display: flex;
+    align-items: center;
+    height: 190px;
+    width: 462px;
+    gap: 1rem;
+    justify-self: center;
+    margin-bottom: 0.625rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid lightgray;
+}
+
+.img-wrapper a {
+    display: block;
+    height: 150px;
+    width: 100px;
+}
+
+.title-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-wrapper{
+    display: flex;
+    gap: 5px;
+    padding-right: 2.5rem;
+}
+
+.rating-img{
+    height: 20px;
+}
+
+.modifier{
+    height: 1rem;
+}
+
+.rating{
+    padding: 2px 0 0;
+    margin: 0;
+}
+
+#movie-poster{
+    height: 150px;
+    width: 100px;
+}
+
+.movie-details{
+    align-self: center;
+}
+
+.title {
+    font-size : 1.125rem;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.movie-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movie-info-extended,
+.add-watchlist,
+.remove-watchlist{
+    display: flex;
+
+}
+
+.movie-info-extended{
+    gap: 1rem;
+}
+
+.add-watchlist,
+.remove-watchlist{
+    margin-right: 2.5rem;
+    gap: 5px;
+}
+
+.runtime, .genre, .watchlist {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    max-height: fit-content;
+}
+
+.plot,
+.plot-preview {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: gray;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+/*----------disabled items for Watchlist-------------*/
+
+.search-input-disabled,
+.search-button-disabled {
+    position: relative;
+    margin: 0;
+    padding: 0.5rem;
+    border: 0;
+    background-color: white; 
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+}
+
+.search-button-disabled{
+    font-size: 0.875rem;
+    color: #374151;
+    border-right: 1px solid lightgray;
+    border-left: 1px solid lightgray;
+    border-radius: 0px 4px 4px 0px;
+    padding: 0 1rem;
+    cursor: not-allowed;
+}
+
+.search-input-disabled{
+    background: url(images/search.png) no-repeat;
+    background-position: 6% ;
+    padding-left: 3rem;
+    background-color: white;
+    border-left: 1px solid lightgray;
+    border-radius: 0;
+    width: 260px;
+    outline: none;
+    cursor: not-allowed;
+}
+
+/*--------Utils ---------*/
+
+.hidden {
+    display: none;
+}
+
+.read-more{
+    font-size: 0.75rem;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.darkmode {
+    background-color: #121212;
+    color: lightgray;
+}
+
+.darkmode-img {
+    filter: invert(100%);
+}
+
+.lightmode-img {
+    filter: none;
+}
