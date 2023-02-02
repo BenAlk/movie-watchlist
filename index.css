@@ -171,6 +171,7 @@ a:hover {
 
 .modifier{
     height: 1rem;
+    cursor: pointer;
 }
 
 .rating{
@@ -269,6 +270,9 @@ a:hover {
 }
 
 /*--------Utils ---------*/
+.loading {
+    width: 100%;
+}
 
 .hidden {
     display: none;

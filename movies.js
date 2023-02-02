@@ -3,7 +3,7 @@ const moviesWatchlistEl = document.getElementById("movies-list")
 let localMovieArray = []
 let addMovieArray = []
 let removeMovieArray = []
-import {darkImg, searchInput} from "./darkmode.js"
+import {darkImg, darkLoader, searchInput} from "./darkmode.js"
 
 /*------------Check Local Storage-------------*/
 
@@ -61,6 +61,7 @@ async function movieSearch(movie) {
     if (!movie) {
         searchInput.placeholder = "You need to enter a movie to search!"
     } else {
+            loading()
         try {
             const res = await fetch(`https://www.omdbapi.com/?s=${movie}&apikey=e318034b`)
             if (!res.ok) {
@@ -237,6 +238,15 @@ function placeholder() {
     <div class="background-placeholder">
         <img src="images/film-icon.png" alt="movie area placeholder image">
         <p>Watchlist Empty</p>
+    </div>`
+}
+
+function loading() {
+    movieContainerEl.innerHTML = ""
+    movieContainerEl.innerHTML = `
+    <div class="background-placeholder">
+        <img class="${darkLoader()}" src="images/loading.gif" alt="movie area placeholder image">
+    <p>Loading...</p>
     </div>`
 }
 
