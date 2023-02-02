@@ -62,7 +62,7 @@ async function movieSearch(movie) {
         searchInput.placeholder = "You need to enter a movie to search!"
     } else {
         try {
-            const res = await fetch(`http://www.omdbapi.com/?s=${movie}&apikey=e318034b`)
+            const res = await fetch(`https://www.omdbapi.com/?s=${movie}&apikey=e318034b`)
             if (!res.ok) {
                 throw new Error(`Request to the server failed, please try again.`)
             }
@@ -83,7 +83,7 @@ async function getMovieById(movieArray) {
     const displaySearchArray = []
     for (const movie of movieArray) {
         try {
-            const res = await fetch(`http://www.omdbapi.com/?i=${movie}&apikey=e318034b`)
+            const res = await fetch(`https://www.omdbapi.com/?i=${movie}&apikey=e318034b`)
             if (!res.ok) {
                 throw new Error(`Request to the server failed, please try again.`)
             }
