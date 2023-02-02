@@ -3,7 +3,7 @@ const moviesWatchlistEl = document.getElementById("movies-list")
 let localMovieArray = []
 let addMovieArray = []
 let removeMovieArray = []
-import {darkImg, darkLoader, searchInput} from "./darkmode.js"
+import {darkImg, darkLoader, darkMode, darkModeEnabled, searchInput} from "./darkmode.js"
 
 /*------------Check Local Storage-------------*/
 
@@ -51,6 +51,7 @@ function removeFromWatchlist(id) {
         placeholder()            
     }
     renderWatchlist()
+    darkMode(darkModeEnabled)
 }  
 
 /*-----------------Fetch API -----------------*/
