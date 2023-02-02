@@ -270,8 +270,13 @@ a:hover {
 }
 
 /*--------Utils ---------*/
-.loading {
+.loading,
+.loading-dark {
     width: 100%;
+}
+
+.loading-dark {
+    filter: invert(95%);
 }
 
 .hidden {

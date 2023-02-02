@@ -48,6 +48,6 @@ function darkImg() {
 
 function darkLoader() {
     darkModeEnabled = JSON.parse(localStorage.getItem('darkModeEnabled'))
-    return (darkModeEnabled ? 'loading darkmode-img' : 'loading lightmode-img')
+    return (darkModeEnabled ? 'loading-dark' : 'loading')
 }
 export { setDarkModeVar, darkModeEnabled, toggleDarkMode, darkMode, darkImg, darkLoader, darkModeEl, searchInput, activateSearch }
